@@ -6,6 +6,7 @@
 
 html,
 body {
+    position: relative;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -32,13 +33,17 @@ html {
 }
 
 ._container {
-    max-width: 1350px;
+    max-width: 1250px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .page {
     flex: 1 1 auto;
+}
+
+p {
+    margin: 0;
 }
 
 a {

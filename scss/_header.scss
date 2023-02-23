@@ -1,0 +1,111 @@
+.header {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+
+    // .header__container
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        &>*:not(:last-child) {
+            margin-right: 7px;
+        }
+    }
+
+    // .header__logo
+    &__logo {}
+
+    // .header__menu
+    &__menu {}
+
+    // .header__call-back
+    &__call-back {}
+}
+
+
+.main-logo {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+
+    // .main-logo__item
+    &__item {
+
+        // .main-logo__item_left
+        &_left {
+            font-size: 50px;
+            margin-right: 10px;
+
+            span {
+                font-size: 66px;
+            }
+        }
+
+        // .main-logo__item_right
+        &_right {
+            display: block;
+
+            &>* {
+                line-height: 19.6px;
+            }
+        }
+    }
+
+}
+
+
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    // .menu__list
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    // .menu__item
+    &__item {
+        padding: 0 15px;
+        font-weight: 400;
+    }
+
+    // .menu__link
+    &__link {
+
+        &:after {
+            content: " ";
+            position: relative;
+            display: block;
+            width: 0;
+            margin: 2px auto 0;
+            border: 0.9px solid $white;
+            transition: all 280ms ease-in-out;
+        }
+
+        &:hover:after {
+            width: 100%;
+            border-color: $orange;
+            transition: width 350ms ease-in-out;
+        }
+    }
+}
+
+.call-back {
+    margin: 5px 0 0;
+
+    // .call-back__number
+    &__number {
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    // .call-back__btn
+    &__btn {
+        @include button;
+        margin: 5px 0 0;
+    }
+}
