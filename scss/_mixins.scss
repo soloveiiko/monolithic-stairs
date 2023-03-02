@@ -16,3 +16,33 @@
         transition: .2s ease-in;
     }
 }
+
+@mixin popup {
+    position: absolute;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+@mixin close-btn {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 28px;
+    height: 25px;
+    padding-top: 3px;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 75px 75px 8px 50px;
+    color: $orange;
+    font-size: 24px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $orange;
+        border-color: $orange;
+        color: white;
+    }
+}

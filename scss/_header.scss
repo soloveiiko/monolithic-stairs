@@ -3,6 +3,7 @@
     top: 15px;
     left: 0;
     width: 100%;
+    z-index: 10;
 
     // .header__container
     &__container {
@@ -13,15 +14,6 @@
             margin-right: 7px;
         }
     }
-
-    // .header__logo
-    &__logo {}
-
-    // .header__menu
-    &__menu {}
-
-    // .header__call-back
-    &__call-back {}
 }
 
 

@@ -2,6 +2,8 @@
 @import '_mixins.scss';
 @import '_fonts.scss';
 @import '_header.scss';
+@import '_banner.scss';
+@import '_popup.scss';
 @import '_footer.scss';
 
 html,
@@ -33,13 +35,39 @@ html {
 }
 
 ._container {
-    max-width: 1250px;
+    max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
 .page {
     flex: 1 1 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+.title-h3 {
+    position: relative;
+    font-size: 29px;
+    margin-bottom: 12px;
+
+    &::before {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        content: ' ';
+        width: 120px;
+        height: 18px;
+        background-color: $light-orange;
+        z-index: -1;
+    }
 }
 
 p {
