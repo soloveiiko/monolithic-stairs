@@ -55,91 +55,28 @@
       <main class="page home-page">
         <!-- ----------------------------BANNER------------------------------------ -->
 
-        <div class="home-page__container banner">
-          <div class="banner__img-container">
-            <img src="images/banner/banner.png" alt="banner" />
-          </div>
-          <div class="banner__information banner-information">
-            <div class="banner-information__row">
-              In just <span>10 days</span> with a <span>30 year</span> warranty
+        <div class="home-page__banner banner">
+          <div class="banner__container">
+            <div class="banner__img-container">
+              <img src="images/banner/banner.png" alt="banner" />
             </div>
-            <h1 class="banner-information__title">
-              Monolithic stairs "Full construction"
-            </h1>
-            <div class="banner-information__line"></div>
-            <p class="banner-information__text">
-              We will fulfill all your dreams of a modern and beautiful stairs.
-              Minimal price, but with maximum quality!
-            </p>
-
-            <div class="banner-information__popup banner-popup">
-              <div class="banner-popup__btn-container">
-                <button class="banner-popup__advice-btn open-btn">
+            <div class="banner__information banner-information">
+              <div class="banner-information__row">
+                In just <span>10 days</span> with a
+                <span>30 year</span> warranty
+              </div>
+              <h1 class="banner-information__title">
+                Monolithic stairs "Full construction"
+              </h1>
+              <div class="banner-information__line"></div>
+              <p class="banner-information__text">
+                We will fulfill all your dreams of a modern and beautiful
+                stairs. Minimal price, but with maximum quality!
+              </p>
+              <div class="banner-information__btn-container">
+                <button class="banner-information__advice-btn open-btn">
                   Advice
                 </button>
-              </div>
-              <!-- -------------------------CONSULTATION POPUP----------------------------- -->
-
-              <div class="banner-popup__container consultation">
-                <form class="consultation__form consultation-form">
-                  <button
-                    href="#"
-                    class="consultation-form__close-btn close-btn"
-                    onclick="closePopup('consultation', 'consultation-form')"
-                  >
-                    &times;
-                  </button>
-                  <h3 class="consultation-form__title title-h3">
-                    Send a request
-                  </h3>
-                  <p class="consultation-form__subtitle">
-                    for a free consultation
-                  </p>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Name..."
-                    class="consultation-form__input-item"
-                  />
-                  <input
-                    type="tel"
-                    name="number"
-                    placeholder="Phone number..."
-                    class="consultation-form__input-item"
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="E-mail..."
-                    class="consultation-form__input-item"
-                  />
-                  <div class="consultation-form__thanks-popup thanks-popup">
-                    <button class="thanks-popup__submit submit-btn">
-                      Submit an application
-                    </button>
-                    <!-- --------------------------CONFIRMATION POPUP-------------------------------- -->
-
-                    <div class="thanks-popup__confirmation confirmation">
-                      <button
-                        class="confirmation__close-btn close-btn"
-                        onclick="closePopup('consultation', 'confirmation')"
-                      >
-                        &times;
-                      </button>
-                      <h3 class="confirmation__title title-h3">Thank you!</h3>
-                      <p class="confirmation__subtitle">
-                        Application successfully sent.
-                      </p>
-                      <div class="confirmation__img-container">
-                        <img src="images/icons/like.png" alt="like" />
-                      </div>
-                    </div>
-                  </div>
-                  <p class="consultation-form__privacy-policy">
-                    By clicking on the button you agree with
-                    <a href="#">privacy policy</a>
-                  </p>
-                </form>
               </div>
             </div>
           </div>
@@ -149,17 +86,78 @@
         <section class="home-page__preferences"></section>
       </main>
       <footer class="footer"></footer>
-      <script
-        src="https://kit.fontawesome.com/15466f5df9.js"
-        crossorigin="anonymous"
-      ></script>
-      <script
-        src="https://code.jquery.com/jquery-3.6.3.js"
-        integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
-        crossorigin="anonymous"
-      ></script>
-      <script src="js/slick.min.js"></script>
-      <script src="js/index.js"></script>
+
+      <!-- -------------------------CONSULTATION POPUP----------------------------- -->
+
+      <div class="consultation-popup">
+        <div class="consultation-popup__container consultation">
+          <form class="consultation__form">
+            <button
+              href="#"
+              class="consultation__close-btn close-btn"
+              onclick="closePopup()"
+            >
+              &times;
+            </button>
+            <h3 class="consultation__title title-h3">Send a request</h3>
+            <p class="consultation__subtitle">for a free consultation</p>
+            <input
+              type="text"
+              name="name"
+              placeholder="Name..."
+              class="consultation__input-item"
+            />
+            <input
+              type="tel"
+              name="number"
+              placeholder="Phone number..."
+              class="consultation__input-item"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail..."
+              class="consultation__input-item"
+            />
+            <div class="consultation__btn-container">
+              <button type="submit" class="consultation__submit submit-btn">
+                Submit an application
+              </button>
+            </div>
+            <p class="consultation__privacy-policy">
+              By clicking on the button you agree with
+              <a href="#">privacy policy</a>
+            </p>
+          </form>
+
+          <!-- --------------------------CONFIRMATION POPUP-------------------------------- -->
+
+          <div class="consultation__confirmation confirmation">
+            <button
+              class="confirmation__close-btn close-btn"
+              onclick="closePopup()"
+            >
+              &times;
+            </button>
+            <h3 class="confirmation__title title-h3">Thank you!</h3>
+            <p class="confirmation__subtitle">Application successfully sent.</p>
+            <div class="confirmation__img-container">
+              <img src="images/icons/like.png" alt="like" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <script
+      src="https://kit.fontawesome.com/15466f5df9.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.js"
+      integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

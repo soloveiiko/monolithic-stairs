@@ -1,23 +1,30 @@
-var consultWrapper = document.querySelector('.consultation');
-var consultPopup = document.querySelector('.consultation-form');
-var confirmPopup = document.querySelector('.confirmation');
-var openPopupBtn = document.querySelector('.open-btn');
-var submitPopupBtn = document.querySelector('.submit-btn');
+var consultBody = document.querySelector('.consultation-popup'),
+    consultPopup = document.querySelector('.consultation'),
+    confirmPopup = document.querySelector('.confirmation'),
+    openPopupBtn = document.querySelector('.open-btn'),
+    submitPopupBtn = document.querySelector('.submit-btn');
+
+function classToggle(e, classEl) {
+    e.classList.toggle(classEl);
+}
 
 function openConsultationForm() {
-    consultWrapper.style.visibility = 'visible';
-    consultPopup.style.visibility = 'visible';
-}
-function closePopup(wrapper, popup) {
-    var elWrapper = '.' + wrapper;
-    var elPopup = '.' + popup;
-    document.querySelector(elWrapper).style.visibility = 'hidden';
-    document.querySelector(elPopup).style.visibility = 'hidden';
-
+    classToggle(consultBody, 'show-body'); // true.
+    var consultClass = consultPopup.className;
+    if (consultClass = 'hide-consultation') {
+        consultPopup.classList.remove('hide-consultation');
+    }
 }
 function openConfirmation() {
-    consultPopup.style.visibility = 'hidden';
-    confirmPopup.style.visibility = 'visible';
+    classToggle(confirmPopup, 'show-confirmation'); // true.
+    consultPopup.classList.add('hide-consultation');
+}
+function closePopup() {
+    classToggle(consultBody, 'show-body'); //false.
+
+    if (confirmPopup.classList.toggle('show-confirmation')) {
+        classToggle(confirmPopup, 'show-confirmation'); // false.
+    }
 }
 
 openPopupBtn.addEventListener('click', openConsultationForm);

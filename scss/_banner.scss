@@ -1,17 +1,14 @@
-.home-page {
+.banner {
+    position: relative;
     background-color: $white;
 
-    // .home-page__container
+    // .banner__container
     &__container {
         max-width: 1330px;
         margin: 0 auto;
         padding: 140px 15px 120px;
+        display: flex;
     }
-}
-
-.banner {
-    position: relative;
-    display: flex;
 
     // .banner__img-container
     &__img-container {
@@ -24,6 +21,17 @@
             width: 100%;
             height: auto;
         }
+    }
+
+    &::before {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(100%/2 - 230px);
+        transform-origin: 0 50%;
+        background-color: $orange;
     }
 }
 
@@ -66,5 +74,16 @@
         max-width: 380px;
         font-weight: 400;
         font-size: 14px;
+    }
+
+    // .banner-information__btn-container
+    &__btn-container {
+        max-width: 210px;
+    }
+
+    // .banner-information__advice-btn
+    &__advice-btn {
+        @include button;
+        margin-top: 30px;
     }
 }

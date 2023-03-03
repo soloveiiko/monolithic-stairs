@@ -1,50 +1,40 @@
-.banner-popup {
+// ------------CONSULTATION POPUP------------
+.consultation-popup {
+    @include popup-body;
 
-    // .banner-popup__btn-container
-    &__btn-container {
-        max-width: 210px;
+    &.show-body {
+        visibility: visible;
+
+        .consultation {
+            transform: translate(-50%, -50%) scale(1);
+            visibility: visible;
+        }
     }
 
-    // .banner-popup__advice-btn
-    &__advice-btn {
-        @include button;
-        margin-top: 30px;
+    // .consultation-popup__container
+    &__container {
+        max-width: 350px;
     }
 }
 
 .consultation {
-    position: fixed;
-    top: 0;
-    left: 0;
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
-    padding-top: 100px;
-    background-color: rgba(0, 0, 0, 0.4);
-    overflow: auto;
-    z-index: 999;
-}
-
-.consultation-form {
     @include popup;
-    top: 20%;
-    left: 35%;
-    right: 35%;
-    padding: 48px 40px;
-    max-width: 350px;
+    padding: 57px 40px;
+    visibility: hidden;
+    transform: translate(-50%, -50%) scale(0.1);
+    transition: transform 0.4s;
 
-    // .consultation-form__close-btn
-    &__close-btn {
-        @include close-btn;
+    &.hide-consultation {
+        visibility: hidden;
     }
 
-    // .consultation-form__subtitle
+    // .consultation__subtitle
     &__subtitle {
         font-size: 18px;
         margin-bottom: 10px;
     }
 
-    // .consultation-form__input-item
+    // .consultation__input-item
     &__input-item {
         width: 100%;
         border: none;
@@ -54,7 +44,12 @@
 
         &::placeholder {
             color: $black;
-            opacity: 0.8;
+            opacity: 0.7;
+        }
+
+        &:hover {
+            border-bottom: 2px solid $light-orange;
+            transition: border-bottom .3s ease-in-out;
         }
 
         &:focus-visible {
@@ -63,10 +58,10 @@
         }
     }
 
-    // .consultation-form__privacy-policy
+    // .consultation__privacy-policy
     &__privacy-policy {
         text-align: center;
-        margin: 15px 0 0;
+        margin: 12px 0 0;
         color: $gray;
         font-size: 12px;
 
@@ -80,11 +75,13 @@
             }
         }
     }
-}
 
-.thanks-popup {
+    // .consultation__btn-container
+    &__btn-container {
+        max-width: 100%;
+    }
 
-    // .thanks-popup__submit
+    // .consultation__submit
     &__submit {
         @include button;
         margin-top: 30px;
@@ -93,15 +90,31 @@
 
 .confirmation {
     @include popup;
-    top: 0;
-    left: 0;
-    padding: 68px 40px 50px;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    padding: 63px 43px 55px;
     visibility: hidden;
     max-width: 350px;
+    width: 100%;
 
-    // .confirmation__close-btn
-    &__close-btn {
-        @include close-btn;
+    &.show-confirmation {
+        visibility: visible;
+        animation: rotation .2s ease-out;
+
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotateY(90deg);
+            top: 0;
+            left: 0;
+        }
+
+        to {
+            transform: rotateY(0deg);
+            top: 0;
+            left: 0;
+        }
     }
 
     // .confirmation__subtitle
@@ -122,4 +135,9 @@
             height: 100%;
         }
     }
+}
+
+// ------------POPUP CLOSE BUTTONS------------
+.close-btn {
+    @include close-btn;
 }
