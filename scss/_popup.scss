@@ -99,19 +99,19 @@
 
     &.show-confirmation {
         visibility: visible;
-        animation: rotation .2s ease-out;
-
+        transition: transform 4s;
+        animation: rotation .5s ease-out;
     }
 
     @keyframes rotation {
         from {
-            transform: rotateY(90deg);
+            transform: rotateY(150deg) scale(0.1);
             top: 0;
             left: 0;
         }
 
         to {
-            transform: rotateY(0deg);
+            transform: rotateY(0deg) scale(1);
             top: 0;
             left: 0;
         }
