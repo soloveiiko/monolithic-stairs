@@ -167,6 +167,22 @@
             @include burger-button-line;
         }
     }
+
+    &.open-burger {
+
+        &__item {
+            transition-duration: 0.5s;
+            background: transparent;
+
+            &::before {
+                transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+            }
+
+            &::after {
+                transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+            }
+        }
+    }
 }
 
 

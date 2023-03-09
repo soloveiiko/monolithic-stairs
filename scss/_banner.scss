@@ -1,103 +1,13 @@
-// .banner {
-//     position: relative;
-//     background-color: $white;
-
-//     // .banner__container
-//     &__container {
-//         max-width: 1330px;
-//         margin: 0 auto;
-//         padding: 140px 15px 120px;
-//         display: flex;
-//     }
-
-//     // .banner__img-container
-//     &__img-container {
-//         position: relative;
-//         text-align: center;
-//         width: 780px;
-//         margin-right: 80px;
-
-//         img {
-//             width: 100%;
-//             height: auto;
-//         }
-//     }
-
-//     &::before {
-//         content: ' ';
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         height: 100%;
-//         width: calc(100%/2 - 230px);
-//         transform-origin: 0 50%;
-//         background-color: $orange;
-//     }
-// }
-
-// .banner-information {
-//     margin: auto 0;
-
-
-//     // .banner-information__row
-//     &__row {
-//         margin-bottom: 3px;
-//         font-weight: 400;
-//         font-size: 12px;
-//         color: $orange;
-
-//         span {
-//             font-weight: 700;
-//             color: $orange;
-//         }
-
-//     }
-
-//     // .banner-information__title
-//     &__title {
-//         max-width: 350px;
-//         margin: 0;
-//         font-weight: 700;
-//         font-size: 45px;
-//     }
-
-//     // .banner-information__line
-//     &__line {
-//         max-width: 350px;
-//         margin: 25px 0 30px;
-//         padding: 1px;
-//         background-color: $orange;
-//     }
-
-//     // .banner-information__text
-//     &__text {
-//         max-width: 380px;
-//         font-weight: 400;
-//         font-size: 14px;
-//     }
-
-//     // .banner-information__btn-container
-//     &__btn-container {
-//         max-width: 210px;
-//     }
-
-//     // .banner-information__advice-btn
-//     &__advice-btn {
-//         @include button-sm;
-//         margin-top: 30px;
-//     }
-// }
-
 .banner {
     position: relative;
     background-color: $white;
 
     // .banner__container
     &__container {
+        display: block;
         max-width: 1330px;
         margin: 0 auto;
         padding: 68px 0px 120px;
-        display: block;
     }
 
     // .banner__img-container
@@ -106,7 +16,6 @@
         text-align: center;
         max-width: 780px;
         width: 100%;
-        margin-right: 80px;
         margin-bottom: 50px;
 
         img {
@@ -204,10 +113,11 @@
     .banner-information {
         width: calc(100%/2 - (-60px));
 
-        // .banner-information__row
-        &__row {
+        // .banner-information__row, .banner-information__text
+        &__row,
+        &__text {
+            max-width: 330px;
             font-size: 12px;
-
         }
 
         // .banner-information__title
@@ -219,12 +129,6 @@
         // .banner-information__line
         &__line {
             max-width: 300px;
-        }
-
-        // .banner-information__text
-        &__text {
-            max-width: 330px;
-            font-size: 12px;
         }
 
         // .banner-information__btn-container
@@ -241,8 +145,17 @@
 @include md {
     .banner {
 
+        // .banner__container
         &__container {
-            padding: 78px 0px 120px;
+            display: flex;
+            align-items: center;
+            padding: 120px 15px 120px;
+        }
+
+        // .banner__img-container
+        &__img-container {
+            margin-right: 25px;
+            margin-bottom: 0;
         }
 
         &::before {
@@ -251,6 +164,78 @@
     }
 
     .banner-information {
-        width: calc(100%/2 - (-60px));
+        width: calc(100%/2 - (-50px));
+
+        // .banner-information__title
+        &__title {
+            font-size: 28px;
+        }
+    }
+}
+
+@include lg {
+    .banner {
+
+        // .banner__container
+        &__container {
+            padding: 140px 15px 120px;
+        }
+
+        &::before {
+            width: calc(100%/2 - 180px);
+        }
+    }
+
+    .banner-information {
+        width: calc(100%/2 - (-20px));
+
+        // .banner-information__title
+        &__title {
+            max-width: 350px;
+            font-size: 36px;
+        }
+
+        // .banner-information__line
+        &__line {
+            max-width: 350px;
+        }
+
+        // .banner-information__text 
+        &__text {
+            max-width: 380px;
+            font-size: 14px;
+        }
+
+        // .banner-information__btn-container
+        &__btn-container {
+            max-width: 210px;
+        }
+
+        // .banner-information__advice-btn
+        &__advice-btn {
+            @include button-md;
+        }
+    }
+}
+
+@include xl {
+    .banner {
+
+        // .banner__img-container
+        &__img-container {
+            margin-right: 50px;
+        }
+
+        &::before {
+            width: calc(100%/2 - 180px);
+        }
+    }
+
+    .banner-information {
+
+        // .banner-information__title
+        &__title {
+            font-size: 42px;
+        }
     }
 }

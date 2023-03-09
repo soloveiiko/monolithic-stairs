@@ -4,4 +4,8 @@ var burgerBtn = document.querySelector('.burger-button'),
 function openDropdown() {
     dropdownMenu.classList.toggle('show-dropdown');
 }
+function burgerAnimation() {
+    burgerBtn.classList.toggle('open-burger');
+}
+burgerBtn.addEventListener('click', burgerAnimation);
 burgerBtn.addEventListener('click', openDropdown);
