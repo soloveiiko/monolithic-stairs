@@ -5,7 +5,7 @@
     background-color: $orange;
     border-radius: 2px;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 17px;
     text-align: center;
     color: $white;
@@ -64,12 +64,12 @@
     color: $orange;
     font-size: 24px;
     cursor: pointer;
+}
 
-    &:hover {
-        background-color: $orange;
-        border-color: $orange;
-        color: white;
-    }
+@mixin close-btn-hover {
+    background-color: $orange;
+    border-color: $orange;
+    color: white;
 }
 
 @mixin burger-button-line {

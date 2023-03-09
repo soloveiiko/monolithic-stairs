@@ -55,7 +55,7 @@ h6 {
 
 .title-h3 {
     position: relative;
-    font-size: 29px;
+    font-size: 24px;
     margin-bottom: 12px;
 
     &::before {
@@ -67,6 +67,12 @@ h6 {
         height: 18px;
         background-color: $light-orange;
         z-index: -1;
+    }
+}
+
+@include md {
+    .title-h3 {
+        font-size: 29px;
     }
 }
 
