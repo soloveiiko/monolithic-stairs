@@ -1,11 +1,11 @@
-@mixin button {
+@mixin button-sm {
     width: 100%;
-    padding: 9px;
+    padding: 5px;
     border: 1px solid $orange;
     background-color: $orange;
     border-radius: 2px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 17px;
     text-align: center;
     color: $white;
@@ -15,6 +15,16 @@
         border: 1px solid $black;
         transition: .2s ease-in;
     }
+}
+
+@mixin button-md {
+    padding: 7px;
+    font-size: 14px;
+}
+
+@mixin button-lg {
+    padding: 8px;
+    font-size: 16px;
 }
 
 @mixin popup-body {
@@ -61,3 +71,46 @@
         color: white;
     }
 }
+
+@mixin burger-button-line {
+    content: ' ';
+    position: absolute;
+    height: 3px;
+    width: 25px;
+    background-color: $black;
+}
+
+// Small devices.
+@mixin sm {
+    @media (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+// Medium devices.
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+// Large devices.
+@mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+// Extra large devices.
+@mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}
+
+// // Custom devices.
+// @mixin rwd($screen) {
+//     @media (min-width: $screen+'px') {
+//         @content;
+//     }
+// }

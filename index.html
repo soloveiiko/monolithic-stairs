@@ -19,43 +19,52 @@
 
       <header class="header">
         <div class="header__container _container">
-          <a href="#" class="header__logo main-logo">
-            <div class="main-logo__item_left"><span>S</span>tairs</div>
-            <div class="main-logo__item_right">
-              <p>Design</p>
-              <p>Manufacturing</p>
-              <p>Installation</p>
-            </div>
-          </a>
-          <div class="header__menu menu">
+          <div class="header__top-container">
+            <!-- -----------------------------LOGO----------------------------------- -->
+
+            <a href="#" class="header__logo main-logo">
+              <div class="main-logo__item_left"><span>S</span>tairs</div>
+              <div class="main-logo__item_right">
+                <p>Design</p>
+                <p>Manufacturing</p>
+                <p>Installation</p>
+              </div>
+            </a>
             <!-- ------------------------BURGER BUTTON------------------------------ -->
-            <div class="menu__burger-button burger-button">
-              <div class="burger-button__item"></div>
-              <div class="burger-button__item"></div>
+
+            <div class="header__burger-button burger-button">
               <div class="burger-button__item"></div>
             </div>
-            <nav class="menu__nav">
-              <ul class="menu__list">
-                <li class="menu__item">
-                  <a href="about.html" class="menu__link">About Us</a>
-                </li>
-                <li class="menu__item">
-                  <a href="catalog.html" class="menu__link">Catalog</a>
-                </li>
-                <li class="menu__item">
-                  <a href="examples.html" class="menu__link"
-                    >Examples of work</a
-                  >
-                </li>
-                <li class="menu__item">
-                  <a href="contacts.html" class="menu__link">Contacts</a>
-                </li>
-              </ul>
-            </nav>
           </div>
-          <div class="header__call-back call-back">
-            <div class="call-back__number">+380 (44) 123-45-67</div>
-            <button class="call-back__btn">Call me back!</button>
+          <div class="header__dropdown-container">
+            <!-- ---------------------------MAIN MENU-------------------------------- -->
+
+            <div class="header__menu menu">
+              <nav class="menu__nav">
+                <ul class="menu__list">
+                  <li class="menu__item">
+                    <a href="about.html" class="menu__link">About Us</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="catalog.html" class="menu__link">Catalog</a>
+                  </li>
+                  <li class="menu__item">
+                    <a href="examples.html" class="menu__link"
+                      >Examples of work</a
+                    >
+                  </li>
+                  <li class="menu__item">
+                    <a href="contacts.html" class="menu__link">Contacts</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <!-- ---------------------------CALL BACK-------------------------------- -->
+
+            <div class="header__call-back call-back">
+              <div class="call-back__number">+380 (44) 123-45-67</div>
+              <button class="call-back__btn">Call me back!</button>
+            </div>
           </div>
         </div>
       </header>
@@ -168,6 +177,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/burger-menu.js"></script>
     <script src="js/popup.js"></script>
     <script src="js/index.js"></script>
   </body>

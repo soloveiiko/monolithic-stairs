@@ -83,7 +83,7 @@
 
     // .consultation__submit
     &__submit {
-        @include button;
+        @include button-sm;
         margin-top: 30px;
     }
 }
