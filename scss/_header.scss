@@ -8,7 +8,6 @@
     // header__container
     &__container {
         position: relative;
-
     }
 
     &__top-container {
@@ -56,6 +55,13 @@
                 margin-bottom: 30px;
             }
         }
+    }
+
+    &__call-back {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        width: 300px;
     }
 }
 
@@ -121,13 +127,9 @@
     }
 }
 
-.call-back {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 300px;
+.call-back-header {
 
-    // .call-back__number
+    // .call-back-header__number
     &__number {
         margin-right: 20px;
         font-weight: 600;
@@ -135,7 +137,7 @@
         white-space: nowrap;
     }
 
-    // .call-back__btn
+    // .call-back-header__btn
     &__btn {
         @include button-sm;
     }
@@ -229,14 +231,14 @@
         }
     }
 
-    .call-back {
+    .call-back-header {
 
-        // .call-back__number
+        // .call-back-header__number
         &__number {
             font-size: 12px;
         }
 
-        // .call-back__btn
+        // .call-back-header__btn
         &__btn {
             @include button-md;
         }
@@ -346,18 +348,18 @@
         }
     }
 
-    .call-back {
+    .call-back-header {
         display: block;
         margin: 5px 0 0 5px;
         max-width: 150px;
 
-        // .call-back__number
+        // .call-back-header__number
         &__number {
             margin-right: 0;
             font-size: 14px;
         }
 
-        // .call-back__btn
+        // .call-back-header__btn
         &__btn {
             @include button-md;
             margin: 5px 0 0;
@@ -370,7 +372,6 @@
 }
 
 @include lg {
-    .header {}
 
     .main-logo {
 
@@ -399,6 +400,13 @@
 
     .menu {
 
+        &__list {
+
+            &>*:not(:last-child) {
+                margin-right: 25px;
+            }
+        }
+
         // .menu__item
         &__item {
             font-size: 14px;
@@ -406,15 +414,15 @@
         }
     }
 
-    .call-back {
+    .call-back-header {
         max-width: 165px;
 
-        // .call-back__number
+        // .call-back-header__number
         &__number {
             font-size: 16px;
         }
 
-        // .call-back__btn
+        // .call-back-header__btn
         &__btn {
             @include button-lg;
         }
