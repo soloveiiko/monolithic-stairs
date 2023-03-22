@@ -1,0 +1,131 @@
+.preferences {
+    padding: 95px 0 0;
+
+    // .preferences__item
+    &__item {
+        display: flex;
+        max-width: 100%;
+        padding: 40px 15px;
+        border: 1px solid $white;
+    }
+
+    // .preferences__img-container
+    &__img-container {
+        position: relative;
+        width: 100px;
+        margin-right: 10px;
+
+        img {
+            position: relative;
+            width: 75px;
+            height: 80px;
+            margin-left: 3px;
+            padding: 10px;
+            z-index: 1;
+        }
+
+        &::before {
+            content: ' ';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 80px;
+            width: 21px;
+            background-color: $light-orange;
+            z-index: 0;
+        }
+    }
+
+    // .preferences__title
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25.2px;
+        margin-bottom: 10px;
+    }
+
+    // .preferences__text
+    &__description {
+        max-width: 350px;
+        font-size: 14px;
+        line-height: 23.8px;
+    }
+}
+
+@include md {
+    .preferences {
+
+        // preferences__container
+        &__container {
+            display: flex;
+            justify-content: center;
+        }
+
+        // .preferences__img-container
+        &__img-container {
+            width: 90px;
+
+            img {
+                width: 65px;
+                height: 70px;
+            }
+
+            &::before {
+                height: 70px;
+            }
+        }
+
+        // .preferences__title
+        &__title {
+            font-size: 15px;
+        }
+
+        // .preferences__text
+        &__description {
+            font-size: 13px;
+        }
+    }
+}
+
+@include lg {
+    .preferences {
+
+        // .preferences__img-container
+        &__img-container {
+            width: 100px;
+
+            img {
+                width: 75px;
+                height: 80px;
+            }
+
+            &::before {
+                height: 80px;
+            }
+        }
+
+        // .preferences__title
+        &__title {
+            font-size: 16px;
+        }
+
+        // .preferences__text
+        &__description {
+            font-size: 14px;
+        }
+    }
+}
+
+@include lg {
+    .preferences {
+
+        &__item {
+            padding: 40px;
+        }
+
+        // .preferences__title
+        &__title {
+            font-size: 18px;
+        }
+    }
+}

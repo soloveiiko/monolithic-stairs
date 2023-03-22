@@ -4,6 +4,8 @@
 @import '_header.scss';
 @import '_banner.scss';
 @import '_popup.scss';
+@import '_preferences.scss';
+@import '_catalog-slider.scss';
 @import '_footer.scss';
 
 html,
@@ -44,7 +46,13 @@ html {
     flex: 1 1 auto;
 }
 
-h1,
+.home-page {
+    &>* {
+        margin-bottom: 50px;
+    }
+}
+
+a h1,
 h2,
 h3,
 h4,
@@ -55,24 +63,36 @@ h6 {
 
 .title-h3 {
     position: relative;
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 12px;
+    line-height: 43.2px;
 
     &::before {
         position: absolute;
-        bottom: -2px;
-        left: 0;
+        left: -15px;
+        bottom: 4px;
         content: ' ';
-        width: 120px;
-        height: 18px;
+        width: 115px;
+        height: 15px;
         background-color: $light-orange;
         z-index: -1;
     }
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 @include md {
     .title-h3 {
-        font-size: 29px;
+        font-size: 32px;
+
+        &::before {
+            bottom: 0;
+            width: 120px;
+            height: 18px;
+        }
     }
 }
 
@@ -89,4 +109,10 @@ li {
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+@include lg {
+    .title-h3 {
+        font-size: 34px;
+    }
 }

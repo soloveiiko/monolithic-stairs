@@ -1,0 +1,202 @@
+.catalog-slider {
+
+    // .catalog-slider__container
+    &__container {}
+
+    // .catalog-slider__body
+    &__body {
+        margin-top: 20px;
+    }
+
+    // .catalog-slider__item
+    &__item {
+        border: 2px solid $white;
+        height: 100%;
+    }
+
+    // .catalog-slider__bottom-container
+    &__bottom-container {
+        padding: 10px 15px 30px;
+        background-color: $white;
+        text-align: center;
+
+        &>*:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+
+    // .catalog-slider__img-container
+    &__img-container {
+        display: flex;
+        align-items: center;
+        padding: 30px;
+
+        img {
+            position: relative;
+            max-width: 400px;
+            margin: 0 auto;
+
+            // &::after {
+            //     content: ' ';
+            //     position: absolute;
+            //     background-image: linear-gradient(to right,
+            //             black, black 50%,
+            //             green 50%, green 75%,
+            //             yellow 75%, yellow);
+            // }
+
+        }
+    }
+
+    // .catalog-slider__title
+    &__title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 36.8px;
+    }
+
+    // .catalog-slider__price
+    &__price {
+        font-size: 14px;
+        line-height: 20px;
+
+        span {
+            padding: 0 3px;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 37px;
+        }
+    }
+
+    // .catalog-slider__btn-container
+    &__btn-container {
+        margin: 0 auto;
+        max-width: 150px;
+    }
+
+    // .catalog-slider__btn
+    &__btn {
+        @include button-sm;
+    }
+}
+
+.more-btn {
+    padding: 7px;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+    li {
+        margin: 0 5px;
+
+        button {
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: 1px solid $light-orange;
+            background-color: $light-orange;
+            font-size: 0;
+            color: transparent;
+        }
+    }
+
+    .slick-active {
+        button {
+            width: 17px;
+            height: 17px;
+            border: 1px solid $black;
+            background-color: $black;
+        }
+    }
+}
+
+@include sm {
+    .catalog-slider {
+
+        // .catalog-slider__item
+        &__item {
+            margin: 0 10px;
+        }
+
+        // .catalog-slider__body
+        &__body {
+            position: relative;
+        }
+
+        // .catalog-slider__img-container
+        &__img-container {
+            min-height: 300px;
+            height: 100%;
+        }
+
+        .slick-arrow {
+            position: absolute;
+            top: -56px;
+            display: flex;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border: none;
+            background-color: transparent;
+            font-size: 0;
+            cursor: pointer;
+
+            &::before {
+                color: $orange;
+                font-size: 30px;
+            }
+        }
+
+        .slick-prev {
+            right: 45px;
+
+            &::before {
+                content: '<';
+            }
+        }
+
+        .slick-next {
+            right: 5px;
+
+            &::before {
+                content: '>';
+            }
+
+            &::after {
+                content: '|';
+                position: absolute;
+                right: 30.5px;
+                bottom: 17px;
+                color: $orange;
+                font-size: 28px;
+                cursor: default;
+            }
+        }
+
+        .slick-disabled {
+
+            &::before,
+            &::after {
+                color: $black;
+            }
+        }
+    }
+}
+
+@include md {
+    .catalog-slider {
+
+        // .catalog-slider__btn-container
+        &__btn-container {
+            max-width: 160px;
+        }
+    }
+
+    .more-btn {
+        padding: 9px;
+        font-size: 16px;
+    }
+}

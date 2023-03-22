@@ -17,11 +17,6 @@
         max-width: 780px;
         width: 100%;
         margin-bottom: 50px;
-
-        img {
-            width: 100%;
-            height: auto;
-        }
     }
 
     &::before {
@@ -77,6 +72,7 @@
         max-width: 280px;
         font-weight: 400;
         font-size: 10px;
+        line-height: 22.4px;
     }
 
     // .banner-information__btn-container
