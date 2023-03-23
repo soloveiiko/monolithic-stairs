@@ -1,12 +1,14 @@
-@import '_variables.scss';
-@import '_mixins.scss';
-@import '_fonts.scss';
-@import '_header.scss';
-@import '_banner.scss';
-@import '_popup.scss';
-@import '_preferences.scss';
-@import '_catalog-slider.scss';
-@import '_footer.scss';
+@import 'additional/variables';
+@import 'additional/mixins';
+@import 'additional/fonts';
+@import 'header';
+@import 'home-page/banner';
+@import 'popups/consultation-popup';
+@import 'popups/confirmation-popup';
+@import 'home-page/preferences';
+@import 'home-page/catalog-slider';
+@import 'home-page/order';
+@import 'footer';
 
 html,
 body {
@@ -52,7 +54,11 @@ html {
     }
 }
 
-a h1,
+a,
+p,
+ul,
+li,
+h1,
 h2,
 h3,
 h4,
@@ -61,9 +67,24 @@ h6 {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+ul,
+li {
+    list-style: none;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
 .title-h3 {
     position: relative;
-    font-size: 26px;
+    font-size: 25px;
     margin-bottom: 12px;
     line-height: 43.2px;
 
@@ -79,9 +100,14 @@ h6 {
     }
 }
 
-img {
-    width: 100%;
-    height: auto;
+// -------------PRIVACY-POLICY---------------
+.privacy-policy {
+    @include privacy-policy;
+}
+
+// ------------POPUP CLOSE BUTTONS------------
+.close-btn {
+    @include close-btn;
 }
 
 @include md {
@@ -94,25 +120,21 @@ img {
             height: 18px;
         }
     }
-}
 
-p {
-    margin: 0;
-}
+    .close-btn {
 
-a {
-    text-decoration: none;
-}
-
-ul,
-li {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+        &:hover {
+            @include close-btn-hover;
+        }
+    }
 }
 
 @include lg {
     .title-h3 {
-        font-size: 34px;
+        font-size: 33px;
+    }
+
+    .privacy-policy {
+        @include privacy-policy-lg;
     }
 }

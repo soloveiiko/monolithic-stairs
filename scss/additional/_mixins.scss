@@ -1,6 +1,6 @@
 @mixin button-sm {
     width: 100%;
-    padding: 5px;
+    padding: 7px;
     border: 1px solid $orange;
     background-color: $orange;
     border-radius: 2px;
@@ -9,22 +9,21 @@
     line-height: 17px;
     text-align: center;
     color: $white;
+}
+
+@mixin button-md {
+    font-size: 14px;
+}
+
+@mixin button-lg {
+    padding: 10px 8px;
+    font-size: 16px;
 
     &:hover {
         background-color: $black;
         border: 1px solid $black;
         transition: .2s ease-in;
     }
-}
-
-@mixin button-md {
-    padding: 7px;
-    font-size: 14px;
-}
-
-@mixin button-lg {
-    padding: 8px;
-    font-size: 16px;
 }
 
 @mixin popup-body {
@@ -78,6 +77,51 @@
     height: 3px;
     width: 25px;
     background-color: $black;
+}
+
+@mixin input-sm {
+    border: none;
+    border-bottom: 2px solid $gray;
+    padding: 12px 7px;
+    background-color: transparent;
+
+    &::placeholder {
+        color: $black;
+        opacity: 0.7;
+    }
+
+    &:focus-visible {
+        outline: none;
+        border-bottom: 2px solid $orange;
+    }
+}
+
+@mixin input-hover {
+    border-bottom: 2px solid $light-orange;
+    transition: border-bottom .3s ease-in-out;
+}
+
+@mixin privacy-policy {
+    text-align: center;
+    margin: 12px auto 0;
+    color: $gray;
+    font-size: 12px;
+
+    a {
+        color: $gray;
+        border-bottom: 1px solid $gray;
+    }
+}
+
+@mixin privacy-policy-lg {
+    font-size: 14px;
+
+    a {
+        &:hover {
+            color: $orange;
+            border-bottom: 1px solid $orange;
+        }
+    }
 }
 
 // Small devices.

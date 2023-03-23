@@ -1,8 +1,5 @@
 .catalog-slider {
 
-    // .catalog-slider__container
-    &__container {}
-
     // .catalog-slider__body
     &__body {
         margin-top: 20px;
@@ -76,12 +73,9 @@
 
     // .catalog-slider__btn
     &__btn {
+        display: block;
         @include button-sm;
     }
-}
-
-.more-btn {
-    padding: 7px;
 }
 
 .slick-dots {
@@ -137,7 +131,8 @@
             top: -56px;
             display: flex;
             align-items: center;
-            width: 30px;
+            justify-content: center;
+            width: 25px;
             height: 30px;
             border: none;
             background-color: transparent;
@@ -145,16 +140,17 @@
             cursor: pointer;
 
             &::before {
+                font-family: "FontAwesome";
                 color: $orange;
-                font-size: 30px;
+                font-size: 16px;
             }
         }
 
         .slick-prev {
-            right: 45px;
+            right: 41px;
 
             &::before {
-                content: '<';
+                content: '\f053';
             }
         }
 
@@ -162,14 +158,15 @@
             right: 5px;
 
             &::before {
-                content: '>';
+                content: '\f054';
             }
 
             &::after {
-                content: '|';
+                content: '\7c';
+                font-family: "Font Awesome 5 Free";
                 position: absolute;
-                right: 30.5px;
-                bottom: 17px;
+                right: 27px;
+                bottom: 16px;
                 color: $orange;
                 font-size: 28px;
                 cursor: default;
@@ -177,6 +174,7 @@
         }
 
         .slick-disabled {
+            cursor: default;
 
             &::before,
             &::after {
@@ -193,10 +191,10 @@
         &__btn-container {
             max-width: 160px;
         }
-    }
 
-    .more-btn {
-        padding: 9px;
-        font-size: 16px;
+        // .catalog-slider__btn
+        &__btn {
+            @include button-md;
+        }
     }
 }

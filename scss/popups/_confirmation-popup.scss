@@ -1,0 +1,50 @@
+// ------------CONFIRMATION POPUP------------
+.confirmation {
+    @include popup;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    padding: 30px 43px 20px;
+    visibility: hidden;
+    max-width: 350px;
+    width: 100%;
+
+    &.show-confirmation {
+        visibility: visible;
+        transition: transform 4s;
+        animation: rotation .5s ease-out;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotateY(150deg) scale(0.1);
+            top: 0;
+            left: 0;
+        }
+
+        to {
+            transform: rotateY(0deg) scale(1);
+            top: 0;
+            left: 0;
+        }
+    }
+
+    // .confirmation__subtitle
+    &__subtitle {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    // .confirmation__img-container
+    &__img-container {
+        position: relative;
+        max-width: 200px;
+        height: auto;
+        margin: 20px auto 0;
+    }
+}
+
+@include md {
+    .confirmation {
+        padding: 63px 43px 55px;
+    }
+}
