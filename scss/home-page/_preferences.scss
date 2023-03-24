@@ -1,6 +1,16 @@
 .preferences {
     padding: 95px 0 0;
 
+    // .preferences__title
+    &__title {
+
+        // .preferences__title_h5
+        &_h5 {
+            margin-bottom: 10px;
+        }
+    }
+
+
     // .preferences__item
     &__item {
         display: flex;
@@ -36,14 +46,6 @@
         }
     }
 
-    // .preferences__title
-    &__title {
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 25.2px;
-        margin-bottom: 10px;
-    }
-
     // .preferences__text
     &__description {
         max-width: 350px;
@@ -75,11 +77,6 @@
             }
         }
 
-        // .preferences__title
-        &__title {
-            font-size: 15px;
-        }
-
         // .preferences__text
         &__description {
             font-size: 13px;
@@ -104,28 +101,13 @@
             }
         }
 
-        // .preferences__title
-        &__title {
-            font-size: 16px;
-        }
-
         // .preferences__text
         &__description {
             font-size: 14px;
         }
-    }
-}
-
-@include lg {
-    .preferences {
 
         &__item {
             padding: 40px;
-        }
-
-        // .preferences__title
-        &__title {
-            font-size: 18px;
         }
     }
 }

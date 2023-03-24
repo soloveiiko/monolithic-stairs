@@ -1,16 +1,5 @@
 .about-company {
 
-    // .about-company__title
-    &__title {
-
-        // .about-company__title_h4
-        &_h4 {
-            font-size: 23px;
-            font-weight: 600;
-            line-height: 36.8px;
-        }
-    }
-
     // .about-company__information
     &__information {
         margin-top: 30px;
@@ -113,8 +102,6 @@
         }
     }
 }
-
-@include md {}
 
 @include lg {
     .about-company {

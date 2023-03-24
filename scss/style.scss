@@ -9,6 +9,7 @@
 @import 'home-page/catalog-slider';
 @import 'home-page/order';
 @import 'home-page/about-company';
+@import 'home-page/project-examples.scss';
 @import 'footer';
 
 html,
@@ -99,6 +100,18 @@ img {
         background-color: $light-orange;
         z-index: -1;
     }
+}
+
+.title-h4 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 36.8px;
+}
+
+.title-h5 {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 25.2px;
 }
 
 // -------------PRIVACY-POLICY---------------
