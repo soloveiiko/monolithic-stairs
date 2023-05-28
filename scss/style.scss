@@ -6,10 +6,10 @@
 @import 'popups/consultation-popup';
 @import 'popups/confirmation-popup';
 @import 'home-page/preferences';
+@import 'slick-arrows';
 @import 'home-page/catalog-slider';
 @import 'home-page/order';
 @import 'home-page/about-company';
-@import 'home-page/project-examples.scss';
 @import 'footer';
 
 html,
@@ -89,6 +89,7 @@ img {
     font-size: 25px;
     margin-bottom: 12px;
     line-height: 34.8px;
+    z-index: 2;
 
     &::before {
         position: absolute;
@@ -109,7 +110,7 @@ img {
 }
 
 .title-h5 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 25.2px;
 }

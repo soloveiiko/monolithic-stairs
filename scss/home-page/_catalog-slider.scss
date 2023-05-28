@@ -69,34 +69,10 @@
         display: block;
         @include button-sm;
     }
-}
 
-.slick-dots {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-
-    li {
-        margin: 0 5px;
-
-        button {
-            width: 9px;
-            height: 9px;
-            padding: 0;
-            border: 1px solid $light-orange;
-            background-color: $light-orange;
-            font-size: 0;
-            color: transparent;
-        }
-    }
-
-    .slick-active {
-        button {
-            width: 17px;
-            height: 17px;
-            border: 1px solid $black;
-            background-color: $black;
-        }
+    .slick-dots {
+        margin-top: 20px;
+        @include slick-dots;
     }
 }
 
@@ -120,59 +96,8 @@
         }
 
         .slick-arrow {
-            position: absolute;
             top: -56px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 25px;
-            height: 30px;
-            border: none;
-            background-color: transparent;
-            font-size: 0;
-            cursor: pointer;
-
-            &::before {
-                font-family: "FontAwesome";
-                color: $orange;
-                font-size: 16px;
-            }
-        }
-
-        .slick-prev {
-            right: 41px;
-
-            &::before {
-                content: '\f053';
-            }
-        }
-
-        .slick-next {
-            right: 5px;
-
-            &::before {
-                content: '\f054';
-            }
-
-            &::after {
-                content: '\7c';
-                font-family: "Font Awesome 5 Free";
-                position: absolute;
-                right: 27px;
-                bottom: 16px;
-                color: $orange;
-                font-size: 28px;
-                cursor: default;
-            }
-        }
-
-        .slick-disabled {
-            cursor: default;
-
-            &::before,
-            &::after {
-                color: $black;
-            }
+            z-index: 10;
         }
     }
 }

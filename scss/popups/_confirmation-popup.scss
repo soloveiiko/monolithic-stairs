@@ -12,6 +12,7 @@
         visibility: visible;
         transition: transform 4s;
         animation: rotation .5s ease-out;
+        z-index: 10;
     }
 
     @keyframes rotation {

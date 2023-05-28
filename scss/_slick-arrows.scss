@@ -1,0 +1,39 @@
+.slick-arrow {
+    @include slick-arrows;
+}
+
+.slick-prev {
+    right: 41px;
+
+    &::before {
+        content: '\f053';
+    }
+}
+
+.slick-next {
+    right: 5px;
+
+    &::before {
+        content: '\f054';
+    }
+
+    &::after {
+        content: '\7c';
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        right: 27px;
+        bottom: 16px;
+        color: $orange;
+        font-size: 28px;
+        cursor: default;
+    }
+}
+
+.slick-disabled {
+    cursor: default;
+
+    &::before,
+    &::after {
+        color: $black;
+    }
+}
